@@ -22,7 +22,7 @@
                 <a class="brand-logo">Fixture Maker</a>
                 <ul>
                     <li class="left"><a href="fixture.html"><i class="material-icons">arrow_back</i></a></li>
-                    <li class="right"><a id="saveButton"><i class="material-icons">save</i></a></li>
+                    <li class="right"><a href="#" id="saveButton"><i class="material-icons">save</i></a></li>
                 </ul>
             </div>
         </nav>
@@ -90,15 +90,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
     <script src="js/progressControl.js"></script>
     <script>
+        function isFormValid() {
+            var nameElem = $("#nameText");
+            return nameElem.val().length > 0;
+        }
+
+        function performServerCall() {
+            setTimeout(function () {
+                SetProgressMessage("Processing ...");
+            }, 1000)
+
+            setTimeout(function () {
+                SetProgressMessage("Still. Please wait ...");
+            }, 2000);
+
+            setTimeout(function () {
+                removeProgress();
+            }, 3000);
+        }
+
         $(document).ready(function () {
             $('#saveButton').click(function () {
-                showProgress("This is a custom message");
-                 //alert('save was pressed!')
+                if (!isFormValid()) {
+                    Materialize.toast("This data is not valid. Please review and fill any required field", 4000);
+                    return;
+                }
+                showProgress("This is a custom message", performServerCall);
             });
 
             // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
             $('.modal-trigger').leanModal();
-            
         });
     </script>
 </body>
