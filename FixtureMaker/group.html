@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixture Maker - Materialize CSS</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+
+    <link href="css/custom.css" rel="stylesheet" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div class="valign-wrapper">
+        <div id="progressControl" class="valign grey lighten-2 ">
+            <div class="preloader-wrapper big active ">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                        <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                        <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                        <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div><div class="gap-patch">
+                        <div class="circle"></div>
+                    </div><div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+            <p id="progressText" style="font-style:italic" class="condensed light">and some other style processing ...</p>
+        </div>
+        
+    </div>
+
+    <div class="navbar">
+        <nav class="light-green">
+            <div class="nav-wrapper">
+                <a class="brand-logo">Fixture Maker</a>
+                <ul>
+                    <li class="left"><a href="fixture.html"><i class="material-icons">arrow_back</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h2>Groups</h2>
+        <div class="divider"></div>
+        <section>
+            <div class="section">
+                <div class="row">
+                    <div class="col s12 m10 l10 offset-m1 offset-l1">
+                        <!--dropdown here for Mode-->
+                        <div class="input-field">
+                            <select>
+                                <option class="blue-text" value="" disabled selected>Choose your option</option>
+                                <option value="1">Group #1</option>
+                                <option value="2">Group #2</option>
+                                <option value="3">Group #3</option>
+                            </select>
+                            <label>Select a Group</label>
+                        </div>
+                    </div>
+                    <div class="col s12 m10 l10 offset-m1 offset-l1">
+                        <table class="highlight">
+                            <thead>
+                                <tr>
+                                    <th>Team Name</th>
+                                    <th>Points</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Team 1</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>Team 2</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Team 3</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Team 4</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).ready(function () {
+                $('select').material_select();
+                //$('select').find('option').addClass('blue-text');
+            });
+        })
+    </script>
+</body>
+</html>

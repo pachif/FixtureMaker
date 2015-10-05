@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixture Maker - Materialize CSS</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+
+    <style>
+        /* label focus color */
+        .input-field input[type=text]:focus + label {
+            color: #03a9f4;
+        }
+
+        /* label underline focus color */
+        .input-field input:focus {
+            border-bottom: 1px solid #03a9f4;
+            box-shadow: 0 1px 0 0 #03a9f4;
+        }
+    </style>
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class="indigo darken-1">
+            <div class="nav-wrapper">
+                <a class="brand-logo">Fixture Maker</a>
+                <ul>
+                    <li class="left"><a href="default.html"><i class="material-icons">arrow_back</i></a></li>
+                    <li class="right"><a href="#"><i class="material-icons">save</i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <h2>Fixture Form</h2>
+        <div class="divider"></div>
+        <section>
+            <div class="section">
+                <div class="row">
+                    <div class="col s12 m10 l10 offset-m1 offset-l1">
+                        <div class="input-field">
+                            <input id="fixtureNameText" type="text" class="validate">
+                            <label for="fixtureNameText">Name</label>
+                        </div>
+
+                        <!--dropdown here for Mode-->
+                        <div class="input-field">
+                            <select>
+                                <option class="blue-text" value="" disabled selected>Choose your option</option>
+                                <option value="1">Tournament</option>
+                                <option value="2">League</option>
+                                <option value="3">League Two Ways</option>
+                            </select>
+                            <label>Tournament Mode</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input id="groupSizeText" type="number" class="validate">
+                            <label for="groupSizeText" data-error="that is not a valid number" data-success="that's good!">Group Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="mdl-cell mdl-cell--3-col"></div>-->
+        </section>
+        <section>
+            <div class="row">
+                <div class="col s12 m4 l4 center-align">
+                    <a href="team.html" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">group</i></a>
+                    <h5>Configure Teams and Players</h5>
+                    <p class="center-align">Here you can configure the teams that participates of this fixture along with their players</p>
+                </div>
+                <div class="col s12 m4 l4 center-align">
+                    <a href="group.html" class="btn-floating btn-large waves-effect waves-light light-green"><i class="material-icons">equalizer</i></a>
+                    <h5>Groups, Scores and Positions</h5>
+                    <p>Here you can see competition progress and teams scores, groups conformation, teams positions, and more</p>
+                </div>
+                <div class="col s12 m4 l4 center-align">
+                    <a href="match.html" class="btn-floating btn-large waves-effect waves-light purple"><i class="material-icons">input</i></a>
+                    <h5>Explore Matches</h5>
+                    <p>Here you can set match results, and see progress of the competition</p>
+                </div>
+
+            </div>
+        </section>
+        
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).ready(function () {
+                $('select').material_select();
+                //$('select').find('option').addClass('blue-text');
+            });
+        })
+
+    </script>
+</body>
+</html>

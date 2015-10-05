@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixture Maker - Materialize CSS</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+</head>
+<body>
+    <div class="navbar-fixed">
+        <nav class="light-blue">
+            <div class="nav-wrapper">
+                <a class="brand-logo">Fixture Maker</a>
+
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <h2>Current Fixtures</h2>
+        <div class="divider"></div>
+        <div class="section">
+            <div class="row">
+                <div class="col s12">
+                    <table class="highlight">
+                        <thead>
+                            <tr>
+                                <th>Fixture Name</th>
+                                <th>Team #</th>
+                                <th>Mode</th>
+                                <th>Matches</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Fixture 1</td>
+                                <td>8</td>
+                                <td>Tournament</td>
+                                <td>3/17</td>
+                                <td>
+                                    <a class="waves-effect waves-light btn cyan">Edit</a>
+                                    <a href="#deleteModal" class="waves-effect waves-light btn red modal-trigger">Remove</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Fixture 2</td>
+                                <td>16</td>
+                                <td>League</td>
+                                <td>3/17</td>
+                                <td>
+                                    <a class="waves-effect waves-light btn cyan">Edit</a>
+                                    <a href="#deleteModal" class="waves-effect waves-light btn red modal-trigger">Remove</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Fixture 3</td>
+                                <td>12</td>
+                                <td>One Way League</td>
+                                <td>5/36</td>
+                                <td>
+                                    <a class="waves-effect waves-light btn cyan">Edit</a>
+                                    <a href="#deleteModal" class="waves-effect waves-light btn red modal-trigger">Remove</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <section>
+                <div class="row">
+                    <div class="col s12 m6 l6 center-align">
+                        <a href="fixture.html" class="btn-floating btn-large waves-effect waves-light indigo"><i class="material-icons">add</i></a>
+                        <h5>Create New Fixture</h5>
+                        <p class="center-align">Start a brand new competition, and set up teams, players and more</p>
+                    </div>
+                    <div class="col s12 m6 l6 center-align">
+                        <a href="result.html" class="btn-floating btn-large waves-effect waves-light blue"><i class="material-icons">view_list</i></a>
+                        <h5>See Results</h5>
+                        <p>Choose any completed fixture and look at the final results</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div id="deleteModal" class="modal">
+            <div class="modal-content">
+                <h4>Deleting Fixture</h4>
+                <p>Are you sure you want to remove the fixture?</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn green darken-1">No</a>
+                <a style="margin-right:10px" href="#!" class=" modal-action modal-close waves-effect waves-red btn red darken-1">Yes</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+            $('.modal-trigger').leanModal();
+        });
+    </script>
+</body>
+</html>

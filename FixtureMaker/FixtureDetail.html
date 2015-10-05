@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixture Maker - Material Design Light</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-orange.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+   
+</head>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout-icon">
+                <button class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">arrow_back</i>
+                </button>
+
+            </div>
+
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Fixture Details</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+            </div>
+        </header>
+
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <div class="mdl-grid">
+                    <!--<div class="mdl-cell mdl-cell--3-col"></div>-->
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <label class="mdl-textfield__label" for="fixtureNameText">Fixture Name</label>
+                            <input class="mdl-textfield__input" type="text" id="fixtureNameText" pattern="[A-Z,a-z,0-9, ]*"/>
+                            <span class="mdl-textfield__error">Letters, Numbers and spaces only</span>
+                        </div>
+                        <div>
+                            <!--dropdown here for Mode-->
+                            <div class="mdl-textfield mdl-js-textfield">
+                                <label class="mdl-textfield__label" for="modeDD">Mode</label>
+                                <input class="mdl-textfield__input" type="text" id="modeDD"/>
+                                <button id="menu1" class="mdl-button mdl-js-button mdl-button--icon">
+                                    <i class="material-icons">arrow_drop_down</i>
+                                </button>
+                                <ul class="mdl-menu mdl-js-menu" for="menu1">
+                                    <li class="mdl-menu__item">Continue</li>
+                                    <li class="mdl-menu__item">Stop</li>
+                                    <li class="mdl-menu__item">Pause</li>
+                                </ul>
+                            </div>
+                        <div class="mdl-textfield mdl-js-textfield">
+                            <label class="mdl-textfield__label" for="groupSizeText">Group Size</label>
+                            <input class="mdl-textfield__input" type="text" id="groupSizeText" pattern="[0-9]*"/>
+                            <span class="mdl-textfield__error">Digits only</span>
+                        </div>
+                    </div>
+                    <!--<div class="mdl-cell mdl-cell--3-col"></div>-->
+                </div>
+            </div>
+        </main>
+    </div>
+
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        //alert('jquery ready!');
+    })
+
+</script>
+</body>
+</html>
