@@ -70,10 +70,10 @@
     <Content Include="css\custom.css" />
     <Content Include="default.html" />
     <Content Include="fixture.html" />
-    <Content Include="fixturedetail.html" />
     <Content Include="group.html" />
-    <Content Include="index.html" />
+    <Content Include="js\player.js" />
     <Content Include="js\progressControl.js" />
+    <Content Include="js\team.js" />
     <Content Include="match.html" />
     <Content Include="result.html" />
     <Content Include="team.html" />

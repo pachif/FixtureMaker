@@ -15,15 +15,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
+    <!-- Progress Feedback -->
+    <div id="progressControl"></div>
 
     <div class="navbar">
         <nav class="light-green">
             <div class="nav-wrapper">
-                <a class="brand-logo">Fixture Maker</a>
                 <ul>
                     <li class="left"><a href="fixture.html"><i class="material-icons">arrow_back</i></a></li>
                     <li class="right"><a href="#" id="saveButton"><i class="material-icons">save</i></a></li>
                 </ul>
+                <a class="brand-logo">Fixture Maker</a>
             </div>
         </nav>
     </div>
@@ -63,7 +65,7 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- Modal Structure -->
         <div id="playerModal" class="modal">
             <div class="modal-content">
@@ -87,25 +89,32 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.3.0.min.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/team.js"></script>
     <script src="js/progressControl.js"></script>
     <script>
+        var pc;
+
         function isFormValid() {
             var nameElem = $("#nameText");
             return nameElem.val().length > 0;
         }
 
         function performServerCall() {
-            setTimeout(function () {
-                SetProgressMessage("Processing ...");
-            }, 1000)
+            //setTimeout(function () {
+            //    $("#progressControl").setMessage("Processing ...");
+            //}, 1000)
 
             setTimeout(function () {
-                SetProgressMessage("Still. Please wait ...");
+                pc.progressControl("setMessage", "Still. Please wait ...");
             }, 2000);
 
             setTimeout(function () {
-                removeProgress();
+                pc.progressControl("hideControl");
             }, 3000);
         }
 
@@ -115,11 +124,18 @@
                     Materialize.toast("This data is not valid. Please review and fill any required field", 4000);
                     return;
                 }
-                showProgress("This is a custom message", performServerCall);
+                pc = $("#progressControl").progressControl({
+                    message: "This is a custom message",
+                    executeAction: performServerCall
+                });
+
+                pc.progressControl("showControl");
             });
 
             // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
             $('.modal-trigger').leanModal();
+
+            
         });
     </script>
 </body>

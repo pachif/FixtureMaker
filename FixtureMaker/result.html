@@ -18,19 +18,32 @@
     <div class="navbar">
         <nav class="purple darken-3">
             <div class="nav-wrapper">
-                <a class="brand-logo">Fixture Maker</a>
                 <ul>
                     <li class="left"><a href="fixture.html"><i class="material-icons">arrow_back</i></a></li>
                 </ul>
+                <a class="brand-logo">Fixture Maker</a>
             </div>
         </nav>
     </div>
     <div class="container">
-        <h2>League Results</h2>
+        <h2>Fixture Results</h2>
         <div class="divider"></div>
         <section>
             <div class="section">
                 <div class="row">
+                    <div class="col s12 m10 l10 offset-m1 offset-l1">
+                        <!--dropdown here for Mode-->
+                        <div class="input-field">
+                            <select>
+                                <option class="blue-text" value="" disabled selected>Choose your option</option>
+                                <option value="1">Fixture #1</option>
+                                <option value="2">Fixture #2</option>
+                                <option value="3">Fixture #3</option>
+                            </select>
+                            <label>Select a Fixture</label>
+                        </div>
+                    </div>
+
                     <div class="col s12 m10 l10 offset-m1 offset-l1">
                         <table class="highlight">
                             <thead>
@@ -80,5 +93,17 @@
             </div>
         </section>
     </div>
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $(document).ready(function () {
+                $('select').material_select();
+                //$('select').find('option').addClass('blue-text');
+            });
+        })
+    </script>
 </body>
 </html>
